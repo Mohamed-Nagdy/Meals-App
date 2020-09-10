@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_app/screens/categories_screen.dart';
 import 'package:meal_app/screens/favourites_screen.dart';
+import 'package:meal_app/widgets/main_drawer.dart';
 
 class MainAppScreen extends StatefulWidget {
   @override
@@ -34,6 +35,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(screensList[index]['title']),),
+      drawer: MainAppDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
